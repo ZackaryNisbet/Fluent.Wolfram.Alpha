@@ -1,13 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
+        <OutputType>Library</OutputType>
         <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
+        <AssemblyName>Wolfram.Fluent.Plugin</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Blast.API" Version="0.9.30.7-beta" />
+      <PackageReference Include="Blast.API" Version="0.9.30-beta" />
       <PackageReference Include="Genbox.WolframAlpha" Version="3.0.0-alpha3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="wolfram-alpha-colored.png" />
+      <EmbeddedResource Include="wolfram-alpha-colored.png" />
     </ItemGroup>
 
 </Project>
